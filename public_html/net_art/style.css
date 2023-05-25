@@ -8,7 +8,7 @@
     user-select: none;
 }
 body {
-    background: #fce8c7;
+    background: #0e108d;
 }
 #c {
     display: block;
@@ -56,7 +56,7 @@ p {
   text-align:center;
   white-space:nowrap;
   font-size:19px;
-  background:rgba(0,0,0,0.1);
+  background:rgba(0,0,0,0.1); 
   padding:0px 0px;
   border-radius:8px;
   display:none;

@@ -18,7 +18,7 @@ body {
 }
 
 #sphere {
-  position: absolute;
+
   border-radius: 50%;
   background: radial-gradient(circle at 40%, rgba(105, 178, 224, 0.71), rgba(61, 92, 201, 0.71) 50%, rgba(36, 26, 231, 0.71) 75%, rgba(159, 35, 231, 0.71) 85%);  height: 55em;
   width: 55em;
@@ -46,33 +46,50 @@ img {
   border-radius: 70%;
   border: 0.5em solid rgba(36, 26, 231, 0.71);
   height: auto;
+  transform: scale(.90)
 }
 
 .content {
-  background: rgba(162, 108, 233, 0.843);
+  position: absolute;
+  background: radial-gradient( rgb(243, 203, 253),rgba(191, 142, 255),  rgba(150, 89, 247));
   z-index: 200;
   margin: 3%;
   padding: 5%;
   border-radius: 10%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 1em;
+  display: flex; /* Add flex display to arrange items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 #description {
-  width: 30%;
+  width: 100%; /* Adjust width to take full width of the line */
   margin-bottom: 1em;
+  order: 1; /* Set the order to 1 to appear first */
 }
 
-.contact, .projects {
-  width: 20%;
-  margin-bottom: 1em;
+.contact, .projects, .about {
+  width: 50%; /* Adjust width to take 50% of the line */
+  height: 10%;
+  display: block;
 }
 
-.content > *:not(:last-child) {
-  margin-bottom: 1em;
+.contact {
+  order: 2; /* Set the order to 2 to appear second */
 }
+
+.projects {
+  order: 3; /* Set the order to 3 to appear third */
+}
+
+.about {
+  order: 4; /* Set the order to 4 to appear fourth */
+}
+
+
+
+/* .content > *:not(:last-child) {
+  margin-bottom: 1em;
+} */
 
 
 
@@ -86,8 +103,8 @@ $base-hue: 180; // change for diff colors (180 is nice)
 
 .wrap {
   position: relative;
-  width: 20em;
-  height: 20em;
+  width: 20vw;
+  height: 20vh;
   transform-style: preserve-3d;
   perspective: 62.5 em;
   animation: rotate $time infinite linear; // rotate orb
@@ -145,7 +162,7 @@ $base-hue: 180; // change for diff colors (180 is nice)
   width: 0;
   height: 0;
   transform-style: preserve-3d;
-  perspective: 62.5em;
+  perspective: 62.5%;
   animation: rotate 40s infinite linear;
 }
 @keyframes rotate {
@@ -155,8 +172,8 @@ $base-hue: 180; // change for diff colors (180 is nice)
 }
 .c {
   position: absolute;
-  width: 1em;
-  height: 1em;
+  width: 1.5vw;
+  height: 1.5vh;
   border-radius: 50%;
   opacity: 0;
 }
