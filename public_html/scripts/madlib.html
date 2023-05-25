@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> JavaScript Mad Libs </title>
+
+        <style>
+
+        	body {
+        		background-color:#ffffff;
+        		color:#000000;
+        		font-size:16px;
+        		font-family: "Trebuchet MS";
+        	}
+
+        	div {
+        		display:inline-block;
+        	}
+
+        </style>
+    </head>
+    <body>
+        <div id="container" style="display:none;">
+            A <div id="adj1"></div> <div id="noun1"></div> was walking down the street, when a <div id="adj2"></div> wind filled the air. <div id="person1"></div>, the current Prime Minister of <div id="place1"></div>, had just stepped out of a <div id="adj3"></div> <div id="noun2"></div>. A line of police guarded the way with clubs made of <div id="noun3"></div>, but some people began throwing <div id="adj4"></div> <div id="noun4"></div>!
+        </div>
+
+
+        <script>
+            // capture container to a variable for easy reference
+            var e = document.getElementById('container');
+
+        	document.getElementById('adj1').innerHTML = prompt("Enter an adjective","Adjective");
+        	document.getElementById('adj2').innerHTML = prompt("Enter an adjective","Adjective");
+        	document.getElementById('adj3').innerHTML = prompt("Enter an adjective","Adjective");
+        	document.getElementById('adj4').innerHTML = prompt("Enter an adjective","Adjective");
+        	document.getElementById('noun1').innerHTML = prompt("Enter a noun","Noun");
+        	document.getElementById('noun2').innerHTML = prompt("Enter a noun","Noun");
+        	document.getElementById('noun3').innerHTML = prompt("Enter a noun","Noun");
+        	document.getElementById('noun4').innerHTML = prompt("Enter a noun","Noun");
+        	document.getElementById('person1').innerHTML = prompt("Enter the name of a famous person","Person");
+        	document.getElementById('place1').innerHTML = prompt("Enter the name of a famous place","Place");
+
+            // now that all the answers are in, unhide container
+            e.style.display = 'block';
+        </script>
+    </body>
+</html>

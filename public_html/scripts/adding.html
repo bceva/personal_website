@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+
+        <title>variable operators</title>
+
+    </head>
+    <body>
+
+    	number 1:
+		<input type="text" id="one" value=""><br>
+		number 2:
+		<input type="text" id="two" value=""><br>
+		<br><br>
+		equals:<br>
+		<textarea id="answer" value=""></textarea>
+		<input type="button" value="get answer!" onClick="getValues()">
+        
+        <script>
+			function getValues() {
+				var numVal1 = document.getElementById("one").value;	// get value of first text field
+				var numVal2 = document.getElementById("two").value; // and second
+
+				// use the answer field to add them together
+				document.getElementById("answer").value = numVal1 + numVal2;
+
+				// what problem do we run into? parseInt can help us...
+			}
+        </script>
+    </body>
+</html>

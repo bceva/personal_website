@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body {
+
+	background: #d8e9f2;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+.container {
+    position: relative;
+    top: 80px;
+	width: 780px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #fff2fe;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 2px solid #cf00ba;
+	padding: 20px;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	font-family: Akira Expanded,Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #024669;
+	text-align: justify;
+	
+}
+
+.header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+	border: thick;
+	border: 10 px;
+	border color:#1673a1;
+	background-color: #1673a1;
+}
+
+
+
+#haikuText_main {font-family: Helvetica Neue LT Std, Helvetica, Arial, sans-serif; 
+
+				font-size: 18px}
+
+#haikuText_main1 {font-family: Helvetica Neue LT Std, Helvetica, Arial, sans-serif; 
+
+				font-size: 24px}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+a:link {
+    color: #1673a1;
+}
+a:visited {
+	color: #cf00ba;
+}

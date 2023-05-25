@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <title>mouse</title>
+
+        <style>
+        	#picture {
+        		position:absolute;
+                left:-200px;    /* start it off-screen */
+        	}
+        	img {
+        		width:200px;
+        	}
+
+            /* full-screen background image */
+            html { 
+                background: url(image1.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+
+    	<div id="mousex">
+    		
+    	</div>
+    	
+    	<div id="mousey">
+    		
+    	</div>
+    	
+    	<div id="picture">
+    		<img src="tomato.png">
+    	</div>
+        
+        <script>
+			
+			// assign HTML elements to variables
+			var mx = document.getElementById('mousex');
+			var my = document.getElementById('mousey');
+			var pic = document.getElementById('picture');
+
+			// these are needed to capture mouse movement "events" and when user clicks mouse
+		    document.captureEvents(Event.MOUSEMOVE);
+		    document.captureEvents(Event.MOUSEDOWN);
+
+		    // when they do move or click the mouse, this tells computer which functions to call
+			document.onmousemove = function (e) {mousePos(e);};
+			document.onmousedown = function (e) {mouseClicked();};
+
+			var mouseX = 0;		// these variables will store mouse X and Y positions
+			var mouseY = 0;
+
+			// this is the function that is called when the mouse moves
+			function mousePos (e) {
+
+		        mouseX = e.pageX - 100;	// set mouseX variable to mouse's position on the page
+        		mouseY = e.pageY - 100;	// same for Y. Don't worry too much about understanding the syntax here
+                // we subtract 100 because the image is 200x200 pixels, and since we are specifying the top left corner
+                // of the image, we need to adjust
+
+			    return true;	// just something we do to keep the program happy
+			}
+
+			// and this is the function that is called when the user clicks the mouse
+			function mouseClicked (e) {
+				pic.style.left = mouseX + "px";	// set left value to mouse X position
+				pic.style.top = mouseY + "px";	// as well as top value to mouse Y  (what problem arises here, how can we fix it?)
+
+				return true;
+			}
+        </script>
+
+    </body>
+</html>

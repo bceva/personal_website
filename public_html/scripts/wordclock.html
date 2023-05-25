@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+    <head>
+
+        <title>Word Clock</title>
+
+        <style>
+        	body {
+        		background-color:#313131;
+        		font-size:48px;
+        		font-family:"tahoma";
+        	}
+        	div {
+        		display:inline-block;
+        	}
+        	#container {
+        		position:absolute;
+        		top:40%;
+        		left:50%;
+        		width:700px;
+        		margin-left:-350px;
+        	}
+        	#hour {
+        		color:#B3FF63;
+        	}
+
+        	#minute_ten {
+        		color:#5B7876;
+        	}
+
+        	#minute_one {
+        		color:#B3FF63;
+        	}
+
+        	#am_pm {
+        		color:#5B7876;
+        	}
+
+        </style>
+    </head>
+    <body>
+
+    	<div id="container">
+    		<div id="hour">
+    			
+    		</div>
+    		<div id="minute_ten">
+    			
+    		</div>
+    		<div id="minute_one">
+    			
+    		</div>
+    		<div id="am_pm">
+    			
+    		</div>
+    	</div>
+        
+        <script>
+        	// store date to variable 'd'
+        	var d = new Date();
+        	// extract time from date and store to variable 'hour'
+			var hour = d.getHours();
+			// now minutes
+			var minute = d.getMinutes();
+			// now we need to figure out if it's 'twenty' or 'thirty' and so on...
+			var min_ones = minute % 10;	// get second digit
+			var min_tens = Math.floor(minute / 10);	// get first digit ... rounded down!
+
+			// we don't want hours from 0 - 24, we want 1 - 12, so we need to do some simple math
+			if(hour > 12) {
+				hour = hour - 12;	// if the hour is greater than 12, subtract 12!
+				var pm = true;		// bonus, we know it's PM!
+			}
+
+			// assign the hour div to a variable for easy access
+			var e = document.getElementById('hour');
+			
+			// now create an instance for every possibile hour (1 through twelve)
+			switch(hour) {
+				case 1:
+					e.innerHTML = "one";
+					break;
+				case 2:
+					e.innerHTML = "two";
+					break;
+				case 3:
+					e.innerHTML = "three";
+					break;
+				case 4:
+					e.innerHTML = "four";
+					break;
+				case 5:
+					e.innerHTML = "five";
+					break;
+				case 6:
+					e.innerHTML = "six";
+					break;
+				case 7:
+					e.innerHTML = "seven";
+					break;
+				case 8:
+					e.innerHTML = "eight";
+					break;
+				case 9:
+					e.innerHTML = "nine";
+					break;
+				case 10:
+					e.innerHTML = "ten";
+					break;
+				case 11:
+					e.innerHTML = "eleven";
+					break;
+				case 12:
+					e.innerHTML = "twelve";
+					break;
+			}
+
+			// now assign the minutes tens div to the variable
+			e = document.getElementById('minute_ten');
+
+			switch(min_tens) {
+				case 0:
+					e.innerHTML = "";	// nothin!
+					break;
+				case 1:
+					e.innerHTML = "";	// this is tricky. eleven, twelve, thirteen, will just get handled in the next one
+					break;
+				case 2:
+					e.innerHTML = "twenty";
+					break;
+				case 3:
+					e.innerHTML = "thirty";
+					break;
+				case 4:
+					e.innerHTML = "fourty";
+					break;
+				case 5:
+					e.innerHTML = "fifty";
+					break;
+				case 6:
+					e.innerHTML = "sixty";
+					break;
+				case 7:
+					e.innerHTML = "seventy";
+					break;
+				case 8:
+					e.innerHTML = "eighty";
+					break;
+				case 9:
+					e.innerHTML = "ninety";
+					break;			
+			}
+
+			// now assign the minutes second digit div to the variable
+			e = document.getElementById('minute_one');
+
+			switch(min_ones) {
+				case 0:
+					e.innerHTML = "";	// nothin!
+					break;
+				case 1:
+					e.innerHTML = "one";	// this is tricky. eleven, twelve, thirteen, will just get handled in the next one
+					break;
+				case 2:
+					e.innerHTML = "two";
+					break;
+				case 3:
+					e.innerHTML = "three";
+					break;
+				case 4:
+					e.innerHTML = "four";
+					break;
+				case 5:
+					e.innerHTML = "five";
+					break;
+				case 6:
+					e.innerHTML = "six";
+					break;
+				case 7:
+					e.innerHTML = "seven";
+					break;
+				case 8:
+					e.innerHTML = "eight";
+					break;
+				case 9:
+					e.innerHTML = "nine";
+					break;			
+			}
+
+			// but wait! what about the teens and stuff?
+			if(minute > 9 && minute < 20) {
+				// in that case, erase the ones spot on minutes
+				e = document.getElementById('minute_one');
+				e.innerHTML = "";
+				// it's 10 through 19, eh?
+				// assign e to minute_ten to keep alternating colors
+							e = document.getElementById('minute_ten');
+				switch(minute) {
+					case 10:
+						e.innerHTML = "ten";
+					case 11:
+						e.innerHTML = "eleven";
+						break;
+					case 12:
+						e.innerHTML = "twelve";
+						break;
+					case 13:
+						e.innerHTML = "thirteen";
+						break;
+					case 14:
+						e.innerHTML = "fourteen";
+						break;
+					case 15:
+						e.innerHTML = "fifteen";
+						break;
+					case 16:
+						e.innerHTML = "sixteen";
+						break;
+					case 17:
+						e.innerHTML = "seventeen";
+						break;
+					case 18:
+						e.innerHTML = "eighteen";
+						break;
+					case 19:
+						e.innerHTML = "nineteen";
+						break;	
+				}
+			}
+
+			// finally, AM or PM?
+			// assign variable...
+				e = document.getElementById('am_pm');
+			if(pm) {
+				e.innerHTML = "pm";
+			} else {
+				// ok so it's AM, then
+				e.innerHTML = "am";
+			}
+
+
+        </script>
+
+    </body>
+</html>

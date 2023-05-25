@@ -1,0 +1,84 @@
+@charset "UTF-8";
+body{
+	margin: 0;
+	padding: 0;	
+  }
+#body {
+	position: absolute;
+	top: 200px;
+	left: 650px;
+	z-index: 1;
+  }
+#left_arm {
+	position: absolute;
+	top: 400px;
+	left: 520px;
+	z-index: -1;
+  }
+#right_arm {
+	position: absolute;
+	top: 410px;
+	left: 920px;
+	z-index: 1;
+  }
+#hair {
+	position: absolute;
+	top: 125px;
+	left: 675px;
+	z-index: 4;
+  }
+#lips {
+	position: absolute;
+	top: 410px;
+	left: 685px;
+	z-index: 2;
+  }
+#eyes {
+	position: absolute;
+	top: 225px;
+	left: 675px;
+	z-index: 2;
+  }
+#nose {
+	position: absolute;
+	top: 340px;
+	left: 720px;
+	z-index: 2;
+  }
+#left_ear {
+	position: absolute;
+	top: 290px;
+	left: 640px;
+	z-index: -2;
+  }
+#right_ear {
+	position: absolute;
+	top: 290px;
+	left: 900px;
+	z-index: 4;
+  }
+#sunglasses {
+	position: absolute;
+	top: 275px;
+	left: 650px;
+	z-index: 3;
+  }
+#shoes {
+	position: absolute;
+	top: 575px;
+	left: 635px;
+	z-index: 0;
+  }
+#sparkles {
+	position: absolute;
+	top: 50px;
+	left: 1300px;
+	z-index: 0;
+  }
+ #brady {
+	position: absolute;
+	top: 500px;
+	left: 400px;
+	z-index: 0;
+  }
+

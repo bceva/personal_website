@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+ 
+<head>
+<meta charset="utf-8">
+<title>JavaScript Image Rollover</title>
+
+<!--insert external style sheet--> 
+<link rel="stylesheet" type="text/css" href="story.css">
+
+<!--JavaScript code goes here.-->
+<script language="javascript">
+        function MouseRollover(MyImage) {
+        MyImage.src = "image2.jpg";
+    }
+        function MouseOut(MyImage) {
+        MyImage.src = "image1.jpg";
+    }
+</script>
+
+</head>
+ 
+<body>
+ 
+<div align="center">
+ 
+<!--The rollover image displays here.-->
+<img src="image1.jpg" onMouseOver="MouseRollover(this)" onMouseOut="MouseOut(this)">
+<br>
+Once upon a time there was an evil politician. Then, <a href="rollover2.html">one day...</a>
+</div>
+ 
+</body>
+</html>
