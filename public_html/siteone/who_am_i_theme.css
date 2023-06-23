@@ -1,6 +1,12 @@
-who_am_i_theme.css
+body{
+    background: navy;
+    color:aquamarine;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
 
-#header
+}
 #subheading
 #desc
 #paintings

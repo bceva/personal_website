@@ -2,7 +2,7 @@
 body {
   background: #070336;
   color:#2243e7;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Pathway Extreme', sans-serif;
   padding: 0;
   margin: 0;
 
@@ -18,7 +18,6 @@ body {
 }
 
 #sphere {
-
   border-radius: 50%;
   background: radial-gradient(circle at 40%, rgba(105, 178, 224, 0.71), rgba(61, 92, 201, 0.71) 50%, rgba(36, 26, 231, 0.71) 75%, rgba(159, 35, 231, 0.71) 85%);  height: 55em;
   width: 55em;
@@ -50,13 +49,14 @@ img {
 }
 
 .content {
-  position: absolute;
-  background: radial-gradient( rgb(243, 203, 253),rgba(191, 142, 255),  rgba(150, 89, 247));
+  position: relative;
+  background: radial-gradient( rgb(243, 203, 253),rgb(207, 170, 255),  rgba(150, 89, 247));
   z-index: 200;
-  margin: 3%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 5%;
+  width: 50vw;
   border-radius: 10%;
-  margin-bottom: 1em;
   display: flex; /* Add flex display to arrange items horizontally */
   flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
@@ -65,26 +65,46 @@ img {
   width: 100%; /* Adjust width to take full width of the line */
   margin-bottom: 1em;
   order: 1; /* Set the order to 1 to appear first */
+  text-align: center;
 }
 
-.contact, .projects, .about {
-  width: 50%; /* Adjust width to take 50% of the line */
+.projects, .about, .contact {
+  width: 100%; /* Adjust width to take 50% of the line */
   height: 10%;
   display: block;
-}
-
-.contact {
-  order: 2; /* Set the order to 2 to appear second */
+  text-align: center;
+  list-style: inside;
+  list-style-type: circle;
+  margin-bottom: 3%;
 }
 
 .projects {
-  order: 3; /* Set the order to 3 to appear third */
+  order: 2; /* Set the order to 2 to appear second */
 }
 
 .about {
+  order: 3; /* Set the order to 3 to appear third */
+}
+
+.contact {
   order: 4; /* Set the order to 4 to appear fourth */
 }
 
+.projects li, .about li, .contact li {
+  display: inline;
+  margin-right: 1%;
+}
+
+.projects li ::before, .about li ::before, .contact li ::before {
+  content: "\2605"; /* Unicode for star character */
+  color: rgb(22, 208, 255); /* Optional: Set the color of the stars */
+  position: relative;
+
+}
+
+h2,h4{
+  font-family: 'Taviraj', serif;
+}
 
 
 /* .content > *:not(:last-child) {

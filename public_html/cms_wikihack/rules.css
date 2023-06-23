@@ -5,63 +5,77 @@
   padding: 0;
   box-sizing: border-box;
 }
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
 
 body {
+  display: table-cell;
+  justify-content: center;
   font-family: avenir book,sans-serif;
-  font-size: 12px;
+  font-size: 1em;
   background-image:url('img/background.gif'); 
   background-repeat:repeat;
 }
 
 #description {
-  width: 500px;
-  height: 150px;
-  padding: 45px;
+  width: 31.25em;
+  height: 10em;
+  padding: 2.25%;
   position: absolute;
-  top: 600px;
-  left: 465px;
-  border: 4px solid; 
+  top: 64vh;
+  left: 37vw;
+  border: 0.25em solid; 
   color: black;
   background:radial-gradient(lightgreen, darkgreen) border-box;
   z-index: 4;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 #before_hack img {
-  width: 1000px;
-  height: 500px;
-  padding: 45px;
+  width: 62.5em;
+  height: 31.25em;
+  padding: 2.8125em;
   position: absolute;
-  top: 30px;
-  left: 225px;
-  border: 4px solid; 
+  top: 5vh;
+  left: 24vw;
+  border: 0.25em solid; 
   color: black;
   background:linear-gradient(to bottom, darkgreen, lightgreen) border-box;
   z-index: 3;
 }
 
 #after_hack img {
-  width: 1000px;
-  height: 500px;
-  padding: 45px;
+  width: 62.5em;
+  height: 31.25em;
+  padding: 2.8125em;
   position: absolute;
-  top: 820px;
-  left: 225px;
-  border: 4px solid; 
+  top: 51.25em;
+  left: 24vw;
+  border: 0.25em solid; 
   color: black;
   background:linear-gradient(to top, darkgreen, lightgreen) border-box;
   z-index: 4;
 }
 
 #weblink {
-  width: 185px;
-  height: 75px;
-  padding: 28px;
+  width: 16em;
+  height: 6.5em;
+  padding: 2.25%;
   position: absolute;
-  top: 1400px;
-  left: 628px;
-  border: 4px solid; 
+  top: 86em;
+  left: 43.5vw;
+  border: 0.25em solid; 
   color: black;
   background:radial-gradient(lightgreen, darkgreen) border-box;
   z-index: 4;
@@ -69,13 +83,13 @@ body {
 
 #mid_section{
   z-index: 1;
-  width: 1000px;
-  height: 1000px;
-  padding: 35px;
+  width: 62.5em;
+  height: 62.5em;
+  padding: 2.1875em;
   position: absolute;
-  top: 30px;
-  left: 225px;
-  border: 4px solid; 
+  top: 5vh;
+  left: 24vw;
+  border: 0.25em solid; 
   color: black;
   background: darkgreen;
 
