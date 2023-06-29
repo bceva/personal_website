@@ -20,13 +20,28 @@ html {
 }
 
 body {
-  display: table-cell;
-  justify-content: center;
   font-family: avenir book,sans-serif;
   font-size: 1em;
   background-image:url('img/background.gif'); 
   background-repeat:repeat;
 }
+/* .content {
+  position: relative;
+  background: radial-gradient( rgb(243, 203, 253),rgb(207, 170, 255),  rgba(150, 89, 247));
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+  width: 50vw;
+  border-radius: 10%;
+  display: flex; /* Add flex display to arrange items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center;
+  align-items: center;
+}
+
+.content img {
+  max-width: 100%; /* Make the image scale with the container */
+} */
 
 #description {
   width: 31.25em;

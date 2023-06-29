@@ -23,25 +23,25 @@ body {
 }
 
 .visual {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 #left_sparkles {
-  position: absolute;
-  top: 15%;
-  left: 20%;
+  margin-right: 50%;
+  margin-bottom: -30%;
+
 }
 
 #right_sparkles {
-  position: absolute;
-  top: 60%;
-  right: 20%;
+  margin-left: 50%;
+  margin-top: -30%;
+
 }
 
-/* Media query for mobile devices */
+/* Media query for mobile devices
 @media (max-width: 767px) {
   .visual {
     flex-direction: column;
@@ -51,9 +51,9 @@ body {
   #left_sparkles,
   #right_sparkles {
     position: static;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 20px; /* Adjust the margin as needed 
   }
-}
+} */
 
 
 h2,h4{
@@ -69,6 +69,11 @@ h2,h4{
   border-radius: 10%;
   display: flex; /* Add flex display to arrange items horizontally */
   flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center;
+  align-items: center;
+}
+.content img {
+  max-width: 100%; /* Make the image scale with the container */
 }
 
 #control{
