@@ -7,12 +7,12 @@ document.getElementById('close').onmousedown = function(e) {
 
 // settings
 
-var physics_accuracy  = 3,
+var physics_accuracy  = 5,
     mouse_influence   = 20,
     mouse_cut         = 5,
-    gravity           = 1000,
+    gravity           = 670,
     cloth_height      = 90,
-    cloth_width       = 200,
+    cloth_width       = 170,
     start_y           = 20,
     spacing           = 7,
     tear_distance     = 60;
@@ -250,8 +250,8 @@ window.onload = function () {
     canvas  = document.getElementById('c');
     ctx     = canvas.getContext('2d');
 
-    canvas.width  = 1560;
-    canvas.height = 1350;
+    canvas.width  = 1400;
+    canvas.height = 1500;
 
     start();
 };

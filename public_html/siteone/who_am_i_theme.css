@@ -14,7 +14,7 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 3% 0%;
+  margin-top: 3%;
   width: 100%;
 }
 
@@ -41,19 +41,9 @@ body {
 
 }
 
-/* Media query for mobile devices
-@media (max-width: 767px) {
-  .visual {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #left_sparkles,
-  #right_sparkles {
-    position: static;
-    margin-top: 20px; /* Adjust the margin as needed 
-  }
-} */
+#kaneda{
+  margin-bottom: 5%;
+}
 
 
 h2,h4{
@@ -64,6 +54,7 @@ h2,h4{
   background: radial-gradient( rgb(243, 203, 253),rgb(207, 170, 255),  rgba(150, 89, 247));
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3%;
   padding: 5%;
   width: 50vw;
   border-radius: 10%;

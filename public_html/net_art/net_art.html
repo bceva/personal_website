@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Destruction</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Destruction</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-<canvas id="c"></canvas>
+    <canvas id="c"></canvas>
 
-<div id="info">
-  <div id="top"><br>INSTRUCTIONS<a id="close" href="">&times;</a>
-  </div>
-  <p>
-    <br>* Right-click and drag to rip the net
-    <br>
-    <br>* Refresh for new net
-    <br>
-    <br>
-    <div class="center">
-      <a id="home"  href="../index.html">Had enough?</a>&nbsp;
+    <div class="info">
+      <div id="top"><b><a id="close" onclick="toggle()">&times; INSTRUCTIONS</a></b></div>
+      <div id="int1">* Right-click and drag to rip the net</div>
+      <div id="int2">* Refresh for new net</div>
+      <a id="home"  href="../index.html">Had enough?</a>
     </div>
-    <br>
-  </p>
-</div>
-<script src="stress.js"></script>
-
-
-</body>
+  </body>
+  <script src="stress.js"></script>
+  <script>
+    function toggle() {
+      var x = document.getElementsByClassName("info")[0];
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 </html>
